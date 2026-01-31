@@ -76,7 +76,7 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .font(.title2)
             }
-            
+            .tint(.accentColor)
         }
         .padding()
     }
@@ -105,10 +105,15 @@ struct ContentView: View {
         }
     }
 }
-    // command shift L = open library
-    // command A = select all
-    // control i = fix indentation
-    // option click show value type
-    #Preview {
-        ContentView()
-    }
+// command shift L = open library
+// command A = select all
+// control i = fix indentation
+// option click show value type
+#Preview ("Light Mode"){
+    ContentView()
+        .preferredColorScheme(.light)
+}
+#Preview ("Dark Mode"){
+    ContentView()
+        .preferredColorScheme(.dark)
+}
